@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE6CC00A2BC6CD6100996E4E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0042BC6CD6100996E4E /* main.swift */; };
+		FE6CC00B2BC6CD6100996E4E /* PortForwardingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0052BC6CD6100996E4E /* PortForwardingServer.swift */; };
+		FE6CC00C2BC6CD6100996E4E /* SimpleCLIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0062BC6CD6100996E4E /* SimpleCLIParser.swift */; };
+		FE6CC00D2BC6CD6100996E4E /* GlueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0072BC6CD6100996E4E /* GlueHandler.swift */; };
+		FE6CC00E2BC6CD6100996E4E /* ExecHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0082BC6CD6100996E4E /* ExecHandler.swift */; };
+		FE6CC00F2BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0092BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift */; };
+		FE6CC0122BC6CD8700996E4E /* NIOSSH in Frameworks */ = {isa = PBXBuildFile; productRef = FE6CC0112BC6CD8700996E4E /* NIOSSH */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE6CBFF82BC6CC3200996E4E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FE6CBFFA2BC6CC3200996E4E /* nio-ssh-daemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "nio-ssh-daemon"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6CC0042BC6CD6100996E4E /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = "../../../../Downloads/swift-nio-ssh-main/Sources/NIOSSHClient/main.swift"; sourceTree = "<group>"; };
+		FE6CC0052BC6CD6100996E4E /* PortForwardingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortForwardingServer.swift; sourceTree = "<group>"; };
+		FE6CC0062BC6CD6100996E4E /* SimpleCLIParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCLIParser.swift; sourceTree = "<group>"; };
+		FE6CC0072BC6CD6100996E4E /* GlueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlueHandler.swift; sourceTree = "<group>"; };
+		FE6CC0082BC6CD6100996E4E /* ExecHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecHandler.swift; sourceTree = "<group>"; };
+		FE6CC0092BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractivePasswordPromptDelegate.swift; sourceTree = "<group>"; };
+		FE6CC0132BC6D89D00996E4E /* nio-ssh-daemon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nio-ssh-daemon.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE6CBFF72BC6CC3200996E4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6CC0122BC6CD8700996E4E /* NIOSSH in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE6CBFF12BC6CC3200996E4E = {
+			isa = PBXGroup;
+			children = (
+				FE6CC0132BC6D89D00996E4E /* nio-ssh-daemon.plist */,
+				FE6CBFFC2BC6CC3200996E4E /* nio-ssh-daemon */,
+				FE6CBFFB2BC6CC3200996E4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE6CBFFB2BC6CC3200996E4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CBFFA2BC6CC3200996E4E /* nio-ssh-daemon */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE6CBFFC2BC6CC3200996E4E /* nio-ssh-daemon */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CC0082BC6CD6100996E4E /* ExecHandler.swift */,
+				FE6CC0072BC6CD6100996E4E /* GlueHandler.swift */,
+				FE6CC0092BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift */,
+				FE6CC0042BC6CD6100996E4E /* main.swift */,
+				FE6CC0052BC6CD6100996E4E /* PortForwardingServer.swift */,
+				FE6CC0062BC6CD6100996E4E /* SimpleCLIParser.swift */,
+			);
+			path = "nio-ssh-daemon";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE6CBFF92BC6CC3200996E4E /* nio-ssh-daemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE6CC0012BC6CC3200996E4E /* Build configuration list for PBXNativeTarget "nio-ssh-daemon" */;
+			buildPhases = (
+				FE6CBFF62BC6CC3200996E4E /* Sources */,
+				FE6CBFF72BC6CC3200996E4E /* Frameworks */,
+				FE6CBFF82BC6CC3200996E4E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "nio-ssh-daemon";
+			packageProductDependencies = (
+				FE6CC0112BC6CD8700996E4E /* NIOSSH */,
+			);
+			productName = "nio-ssh-daemon";
+			productReference = FE6CBFFA2BC6CC3200996E4E /* nio-ssh-daemon */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE6CBFF22BC6CC3200996E4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					FE6CBFF92BC6CC3200996E4E = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = FE6CBFF52BC6CC3200996E4E /* Build configuration list for PBXProject "nio-ssh-daemon" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE6CBFF12BC6CC3200996E4E;
+			packageReferences = (
+				FE6CC0102BC6CD8700996E4E /* XCRemoteSwiftPackageReference "swift-nio-ssh" */,
+			);
+			productRefGroup = FE6CBFFB2BC6CC3200996E4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE6CBFF92BC6CC3200996E4E /* nio-ssh-daemon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE6CBFF62BC6CC3200996E4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6CC00D2BC6CD6100996E4E /* GlueHandler.swift in Sources */,
+				FE6CC00A2BC6CD6100996E4E /* main.swift in Sources */,
+				FE6CC00F2BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift in Sources */,
+				FE6CC00B2BC6CD6100996E4E /* PortForwardingServer.swift in Sources */,
+				FE6CC00C2BC6CD6100996E4E /* SimpleCLIParser.swift in Sources */,
+				FE6CC00E2BC6CD6100996E4E /* ExecHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FE6CBFFF2BC6CC3200996E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE6CC0002BC6CC3200996E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FE6CC0022BC6CC3200996E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FE6CC0032BC6CC3200996E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE6CBFF52BC6CC3200996E4E /* Build configuration list for PBXProject "nio-ssh-daemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6CBFFF2BC6CC3200996E4E /* Debug */,
+				FE6CC0002BC6CC3200996E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE6CC0012BC6CC3200996E4E /* Build configuration list for PBXNativeTarget "nio-ssh-daemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6CC0022BC6CC3200996E4E /* Debug */,
+				FE6CC0032BC6CC3200996E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE6CC0102BC6CD8700996E4E /* XCRemoteSwiftPackageReference "swift-nio-ssh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio-ssh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE6CC0112BC6CD8700996E4E /* NIOSSH */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE6CC0102BC6CD8700996E4E /* XCRemoteSwiftPackageReference "swift-nio-ssh" */;
+			productName = NIOSSH;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FE6CBFF22BC6CC3200996E4E /* Project object */;
+}
