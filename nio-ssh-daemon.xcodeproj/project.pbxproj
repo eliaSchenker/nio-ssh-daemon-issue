@@ -10,7 +10,6 @@
 		FE6CC00A2BC6CD6100996E4E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0042BC6CD6100996E4E /* main.swift */; };
 		FE6CC00B2BC6CD6100996E4E /* PortForwardingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0052BC6CD6100996E4E /* PortForwardingServer.swift */; };
 		FE6CC00C2BC6CD6100996E4E /* SimpleCLIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0062BC6CD6100996E4E /* SimpleCLIParser.swift */; };
-		FE6CC00D2BC6CD6100996E4E /* GlueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0072BC6CD6100996E4E /* GlueHandler.swift */; };
 		FE6CC00E2BC6CD6100996E4E /* ExecHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0082BC6CD6100996E4E /* ExecHandler.swift */; };
 		FE6CC00F2BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6CC0092BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift */; };
 		FE6CC0122BC6CD8700996E4E /* NIOSSH in Frameworks */ = {isa = PBXBuildFile; productRef = FE6CC0112BC6CD8700996E4E /* NIOSSH */; };
@@ -29,11 +28,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FE12D2462BC912D2006EE223 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FE6CBFFA2BC6CC3200996E4E /* nio-ssh-daemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "nio-ssh-daemon"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6CC0042BC6CD6100996E4E /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = "../../../../Downloads/swift-nio-ssh-main/Sources/NIOSSHClient/main.swift"; sourceTree = "<group>"; };
 		FE6CC0052BC6CD6100996E4E /* PortForwardingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortForwardingServer.swift; sourceTree = "<group>"; };
 		FE6CC0062BC6CD6100996E4E /* SimpleCLIParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCLIParser.swift; sourceTree = "<group>"; };
-		FE6CC0072BC6CD6100996E4E /* GlueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlueHandler.swift; sourceTree = "<group>"; };
 		FE6CC0082BC6CD6100996E4E /* ExecHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecHandler.swift; sourceTree = "<group>"; };
 		FE6CC0092BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractivePasswordPromptDelegate.swift; sourceTree = "<group>"; };
 		FE6CC0132BC6D89D00996E4E /* nio-ssh-daemon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nio-ssh-daemon.plist"; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		FE6CBFF12BC6CC3200996E4E = {
 			isa = PBXGroup;
 			children = (
+				FE12D2462BC912D2006EE223 /* README.md */,
 				FE6CC0132BC6D89D00996E4E /* nio-ssh-daemon.plist */,
 				FE6CBFFC2BC6CC3200996E4E /* nio-ssh-daemon */,
 				FE6CBFFB2BC6CC3200996E4E /* Products */,
@@ -72,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				FE6CC0082BC6CD6100996E4E /* ExecHandler.swift */,
-				FE6CC0072BC6CD6100996E4E /* GlueHandler.swift */,
 				FE6CC0092BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift */,
 				FE6CC0042BC6CD6100996E4E /* main.swift */,
 				FE6CC0052BC6CD6100996E4E /* PortForwardingServer.swift */,
@@ -145,7 +144,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE6CC00D2BC6CD6100996E4E /* GlueHandler.swift in Sources */,
 				FE6CC00A2BC6CD6100996E4E /* main.swift in Sources */,
 				FE6CC00F2BC6CD6100996E4E /* InteractivePasswordPromptDelegate.swift in Sources */,
 				FE6CC00B2BC6CD6100996E4E /* PortForwardingServer.swift in Sources */,

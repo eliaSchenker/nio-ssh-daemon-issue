@@ -1,3 +1,10 @@
+# Solution
+
+This issue has been resolved and the example adjusted to work with daemons. The problem was that the example binds itself to the stdout (writing any received data to it).
+When running in a daemon the stdout is a file instead, causing a non-file check in bootstrap to fail.
+
+# Reproduction
+
 To run the reproduction follow these steps:
 - Build using Xcode (Product > Build)
 - Find the executable in the build folder (Product > Show Build Folder in Finder)

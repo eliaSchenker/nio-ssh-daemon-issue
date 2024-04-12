@@ -39,28 +39,9 @@ final class ExampleExecHandler: ChannelDuplexHandler {
     }
 
     func channelActive(context: ChannelHandlerContext) {
-        // We need to set up a pipe channel and glue it to this. This will control our I/O.
-        let (ours, theirs) = GlueHandler.matchedPair()
-
-        // Sadly we have to kick off to a background thread to bootstrap the pipe channel.
-        let bootstrap = NIOPipeBootstrap(group: context.eventLoop)
-        context.channel.pipeline.addHandler(ours, position: .last).whenSuccess { _ in
-            DispatchQueue(label: "pipe bootstrap").async {
-                bootstrap.channelOption(ChannelOptions.allowRemoteHalfClosure, value: true).channelInitializer { channel in
-                    channel.pipeline.addHandler(theirs)
-                }.takingOwnershipOfDescriptors(input: 0, output: 1).whenComplete { result in
-                    switch result {
-                    case .success:
-                        // We need to exec a thing.
-                        let execRequest = SSHChannelRequestEvent.ExecRequest(command: self.command, wantReply: false)
-                        context.triggerUserOutboundEvent(execRequest).whenFailure { _ in
-                            context.close(promise: nil)
-                        }
-                    case .failure(let error):
-                        context.fireErrorCaught(error)
-                    }
-                }
-            }
+        let execRequest = SSHChannelRequestEvent.ExecRequest(command: self.command, wantReply: false)
+        context.triggerUserOutboundEvent(execRequest).whenFailure { _ in
+            context.close(promise: nil)
         }
     }
 
@@ -91,6 +72,8 @@ final class ExampleExecHandler: ChannelDuplexHandler {
             fatalError("Unexpected read type")
         }
 
+        print("Received data", String(buffer: bytes))
+
         switch data.type {
         case .channel:
             // Channel data is forwarded on, the pipe channel will handle it.
@@ -98,12 +81,8 @@ final class ExampleExecHandler: ChannelDuplexHandler {
             return
 
         case .stdErr:
-            // We just write to stderr directly, pipe channel can't help us here.
-            bytes.withUnsafeReadableBytes { str in
-                let rc = fwrite(str.baseAddress!, 1, str.count, stderr)
-                precondition(rc == str.count)
-            }
-
+            // stdErr can be handled here
+            return
         default:
             fatalError("Unexpected message type")
         }
